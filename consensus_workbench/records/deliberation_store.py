@@ -7,7 +7,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Any, Iterator, Mapping, Sequence
 
-from consensus_workbench.agenda.item_contract import Decision, DomainRecord, ContractError, canonical_json, stable_hash, utc_now
+from consensus_workbench.agenda.item_contract import Decision, DomainRecord, RuleResult, ContractError, canonical_json, stable_hash, utc_now
 
 
 SCHEMA = """
@@ -241,6 +241,28 @@ class Repository:
         with self.connect() as connection:
             rows = connection.execute("SELECT decision_json FROM decisions ORDER BY record_id,decided_at").fetchall()
         return [json.loads(row[0]) for row in rows]
+
+    def decisions_by_record(self) -> dict[str, "Decision"]:
+        """按 record_id 返回最新封存决定，供分组分析回链使用。"""
+        decisions: dict[str, Decision] = {}
+        for row in self.decision_rows():
+            decisions[row["record_id"]] = Decision(
+                record_id=row["record_id"], outcome=row["outcome"], score=row["score"],
+                reasons=tuple(row["reasons"]),
+                rule_results=tuple(RuleResult(**item) for item in row["rules"]),
+                metrics=dict(row["metrics"]), decided_at=row["decided_at"])
+        return decisions
+
+    def latest_run(self) -> dict[str, Any] | None:
+        with self.connect() as connection:
+            row = connection.execute(
+                "SELECT run_id,fixture_hash,status,record_count,result_json FROM runs "
+                "ORDER BY started_at DESC LIMIT 1").fetchone()
+        if not row:
+            return None
+        return {"run_id": row["run_id"], "fixture_hash": row["fixture_hash"],
+                "status": row["status"], "record_count": row["record_count"],
+                "result_json": json.loads(row["result_json"])}
 
     def event_rows(self) -> list[dict[str, Any]]:
         with self.connect() as connection:
