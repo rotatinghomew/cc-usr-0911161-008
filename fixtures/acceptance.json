@@ -1,0 +1,158 @@
+{
+  "scenario": "多边人工智能专家工作组共识编排台",
+  "synthetic": true,
+  "records": [
+    {
+      "record_id": "agenda_item-001",
+      "payload": {
+        "working_group": "working_group-0",
+        "issue_urgency": 13.9,
+        "evidence_maturity": 0.47,
+        "deliberation_window": 17.7,
+        "resource_band": 19.6,
+        "risk_class": 21.5,
+        "regional_relevance": 0.91,
+        "dependency_count": 25.3,
+        "expert_capacity": 27.2,
+        "evidence_strength": 0.47,
+        "conflict_count": 31.0,
+        "public_value": 32.9
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    },
+    {
+      "record_id": "agenda_item-002",
+      "payload": {
+        "working_group": "working_group-1",
+        "issue_urgency": 17.6,
+        "evidence_maturity": 0.58,
+        "deliberation_window": 21.4,
+        "resource_band": 23.3,
+        "risk_class": 25.2,
+        "regional_relevance": 0.25,
+        "dependency_count": 29.0,
+        "expert_capacity": 30.9,
+        "evidence_strength": 0.58,
+        "conflict_count": 34.7,
+        "public_value": 36.6
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    },
+    {
+      "record_id": "agenda_item-003",
+      "payload": {
+        "working_group": "working_group-2",
+        "issue_urgency": 21.3,
+        "evidence_maturity": 0.69,
+        "deliberation_window": 25.1,
+        "resource_band": 27.0,
+        "risk_class": 28.9,
+        "regional_relevance": 0.36,
+        "dependency_count": 32.7,
+        "expert_capacity": 34.6,
+        "evidence_strength": 0.69,
+        "conflict_count": 38.4,
+        "public_value": 40.3
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    },
+    {
+      "record_id": "agenda_item-004",
+      "payload": {
+        "working_group": "working_group-3",
+        "issue_urgency": 25.0,
+        "evidence_maturity": 0.8,
+        "deliberation_window": 28.8,
+        "resource_band": 30.7,
+        "risk_class": 32.6,
+        "regional_relevance": 0.47,
+        "dependency_count": 36.4,
+        "expert_capacity": 38.3,
+        "evidence_strength": 0.8,
+        "conflict_count": 42.1,
+        "public_value": 44.0
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    },
+    {
+      "record_id": "agenda_item-005",
+      "payload": {
+        "working_group": "working_group-4",
+        "issue_urgency": 28.7,
+        "evidence_maturity": 0.91,
+        "deliberation_window": 32.5,
+        "resource_band": 34.4,
+        "risk_class": 36.3,
+        "regional_relevance": 0.58,
+        "dependency_count": 40.1,
+        "expert_capacity": 42.0,
+        "evidence_strength": 0.91,
+        "conflict_count": 45.8,
+        "public_value": 47.7
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    },
+    {
+      "record_id": "agenda_item-006",
+      "payload": {
+        "working_group": "working_group-0",
+        "issue_urgency": 32.4,
+        "evidence_maturity": 0.25,
+        "deliberation_window": 36.2,
+        "resource_band": 38.1,
+        "risk_class": 40.0,
+        "regional_relevance": 0.69,
+        "dependency_count": 43.8,
+        "expert_capacity": 45.7,
+        "evidence_strength": 0.25,
+        "conflict_count": 49.5,
+        "public_value": 51.4
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    },
+    {
+      "record_id": "agenda_item-007",
+      "payload": {
+        "working_group": "working_group-1",
+        "issue_urgency": 36.1,
+        "evidence_maturity": 0.36,
+        "deliberation_window": 39.9,
+        "resource_band": 41.8,
+        "risk_class": 43.7,
+        "regional_relevance": 0.8,
+        "dependency_count": 47.5,
+        "expert_capacity": 49.4,
+        "evidence_strength": 0.36,
+        "conflict_count": 53.2,
+        "public_value": 55.1
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    },
+    {
+      "record_id": "agenda_item-008",
+      "payload": {
+        "working_group": "working_group-2",
+        "issue_urgency": 39.8,
+        "evidence_maturity": 0.47,
+        "deliberation_window": 43.6,
+        "resource_band": 45.5,
+        "risk_class": 47.4,
+        "regional_relevance": 0.91,
+        "dependency_count": 51.2,
+        "expert_capacity": 53.1,
+        "evidence_strength": 0.47,
+        "conflict_count": 56.9,
+        "public_value": 58.8
+      },
+      "state": "submitted",
+      "source": "synthetic-local-acceptance"
+    }
+  ]
+}
